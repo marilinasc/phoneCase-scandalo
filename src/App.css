@@ -11,12 +11,32 @@
   padding: 3%;
 }
 
-.Navbar > .nav-items > a {
+ul {
+  list-style: none;
+}
+
+.Navbar .nav-items li {
+  float:left
+}
+
+.nav-items a {
   text-decoration: none;
+  display: block;
   color: black;
   margin: 30px;
   font-size: 20px;
 }
+
+.nav-items li ul {
+  display:none;
+  position: absolute;
+  min-width: 70px;
+  background-color:burlywood
+}
+
+.nav-items li:hover > ul {
+  display:block
+;}
 
 .greeting {
   display: flex;
