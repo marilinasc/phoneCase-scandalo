@@ -1,10 +1,10 @@
 import React from 'react'
 import cart from './../cart.png'
 
-const Cart = () => {
+const CartWidget = () => {
     return (
         <img src={cart}></img>
     )
 }
 
-export default Cart;
+export default CartWidget;

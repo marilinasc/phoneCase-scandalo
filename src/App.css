@@ -30,7 +30,7 @@ ul {
 .nav-items li ul {
   display:none;
   position: absolute;
-  min-width: 70px;
+  max-width: 200px;
   background-color:burlywood
 }
 
@@ -43,5 +43,125 @@ ul {
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  padding-top: 3%
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+
+.itemList {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 3%;
+}
+
+.categoria {
+  text-align: left;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 25px;
+  color:rgb(197, 115, 8);
+  margin-left: 3%;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  cursor: pointer;
+  transition: all 200ms ease;
+  padding: 1%;
+  margin: 1%
+}
+
+.card:hover {
+  box-shadow: 0 0 10px rgba(0,0,0,0.5)
+}
+
+.card img {
+  width: 250px;
+  height: 300px;
+}
+
+.card a {
+  text-decoration: none;
+  text-align: center;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 15px;
+  color:black;
+}
+
+.ItemDetail {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 3%;
+}
+
+.ItemDetail img {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 3%;
+  border: rgba(105, 99, 99, 0.884) solid 2px
+}
+
+.ItemDetail img {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 3%;
+  border: rgb(105, 99, 99) solid 2px
+}
+
+.ItemData {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.ItemData h1 {
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 40px;
+  color:rgb(197, 115, 8);
+}
+
+.ItemData h2 {
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 30px;
+  color:black;
+}
+
+.carrito {
+  background-color:rgb(197, 115, 8);
+  border-radius: 5px;
+  border: 0px;
+  height: 50px;
+  padding: 1%;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 20px;
+  margin-top: 2%;
+}
+
+.carrito:hover {
+  background-color:rgb(89, 134, 155);
+}
+
+.contador {
+  border-radius: 5px;
+  height: 40px;
+  width: 50px;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 25px;
+  color:black;
+}
+
+.cantidad {
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 25px;
+  color:black;
+  text-align: center;
+  width: 100px;
 }

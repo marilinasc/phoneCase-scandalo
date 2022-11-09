@@ -1,8 +1,7 @@
-import './../App.css'
 import React, {useState, useEffect} from 'react'
-import Greeting from './../greeting.png'
-import ItemList from './ItemList'
+import ItemDetail from  './ItemDetail'
 import {useParams} from 'react-router-dom'
+
 
 const cases = [
     {id:1, category: "Mandalas", title: "Mandala Clara", description: "Funda Doble Protección. Cubierta de silicona con exterior rigido e impreso con el diseño determinado en la imagen.", price: "1700", pictureUrl:"https://www.caseland.com.ar/532-large_default/mandala-clara.webp"},
@@ -22,10 +21,10 @@ const cases = [
     {id:15, category: "Botanic", title: "Girasoles", description: "Funda Doble Protección. Cubierta de silicona con exterior rigido e impreso con el diseño determinado en la imagen.", price: "1800", pictureUrl:"https://www.caseland.com.ar/975-home_default/girasoles.webp"},
 ]
 
-const ItemListContainer = () => {
 
-    const [data,setData] = useState ([]);
-    const{categoriaId} = useParams();
+const ItemDetailContainer = () => {
+    const [data,setData] = useState({})
+    const {detalleId} = useParams();
 
     useEffect (() => {
         const getData = new Promise (resolve=>{
@@ -33,26 +32,14 @@ const ItemListContainer = () => {
                 resolve(cases);
             }, 2000);
         });
-        if (categoriaId) {
-            getData.then (res => setData(res.filter(item => item.category===categoriaId)));
-        } else {
-            getData.then (res => setData(res));
-        }
-    }, [categoriaId])
+        getData.then (res => setData(res.find(item => item.id===parseInt (detalleId))));
+    }, [])
 
     return (
-        <>
-            <div className="greeting">
-                <img src={Greeting}></img>
-            </div>
-            <div className="categoria">
-                <h1>{categoriaId}</h1>
-            </div>
-            <div className="itemList">
-                <ItemList data={data}/>
-            </div>
-        </>
+        <div className="ItemDetailContainer">
+            <ItemDetail data={data}/>
+        </div>
     )
 }
 
-export default ItemListContainer;
+export default ItemDetailContainer;
