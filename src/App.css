@@ -4,39 +4,12 @@
 }
 
 .Navbar {
-  height: 60px;
   display: flex;
-  justify-content: space-between;
+  justify-content: left;
   align-items: center;
-  padding: 3%;
+  margin-left: 5%;
+  margin-right: 5%;
 }
-
-ul {
-  list-style: none;
-}
-
-.Navbar .nav-items li {
-  float:left
-}
-
-.nav-items a {
-  text-decoration: none;
-  display: block;
-  color: black;
-  margin: 30px;
-  font-size: 20px;
-}
-
-.nav-items li ul {
-  display:none;
-  position: absolute;
-  max-width: 200px;
-  background-color:burlywood
-}
-
-.nav-items li:hover > ul {
-  display:block
-;}
 
 .greeting {
   display: flex;
@@ -57,8 +30,6 @@ ul {
 
 .categoria {
   text-align: left;
-  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  font-size: 25px;
   color:rgb(197, 115, 8);
   margin-left: 3%;
 }
@@ -88,32 +59,21 @@ ul {
 .card a {
   text-decoration: none;
   text-align: center;
-  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  font-size: 15px;
   color:black;
 }
 
 .ItemDetail {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: left;
   padding: 3%;
-}
-
-.ItemDetail img {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  padding: 3%;
-  border: rgba(105, 99, 99, 0.884) solid 2px
-}
-
-.ItemDetail img {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  padding: 3%;
-  border: rgb(105, 99, 99) solid 2px
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  cursor: pointer;
+  transition: all 200ms ease;
+  margin-top: 2%;
+  margin-left: 5%;
+  margin-right: 5%;
 }
 
 .ItemData {
@@ -123,14 +83,10 @@ ul {
 }
 
 .ItemData h1 {
-  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  font-size: 40px;
   color:rgb(197, 115, 8);
 }
 
 .ItemData h2 {
-  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  font-size: 30px;
   color:black;
 }
 
@@ -138,30 +94,78 @@ ul {
   background-color:rgb(197, 115, 8);
   border-radius: 5px;
   border: 0px;
-  height: 50px;
+  height: 40px;
   padding: 1%;
-  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  font-size: 20px;
-  margin-top: 2%;
+  width: 150px;
+  text-decoration: none;
+  text-align: center;
+  color: black;
+  margin: 2%
 }
 
 .carrito:hover {
   background-color:rgb(89, 134, 155);
+  color: black
 }
 
+.contenedorContador {
+  display: flex;
+  flex-direction: row;
+}
+
+
 .contador {
-  border-radius: 5px;
-  height: 40px;
-  width: 50px;
-  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  font-size: 25px;
+  border-radius: 100px;
+  height: 30px;
+  width: 40px;
   color:black;
 }
 
 .cantidad {
-  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  font-size: 25px;
   color:black;
   text-align: center;
   width: 100px;
+}
+
+.imagen{
+  width: 100%;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  padding: 3%;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  cursor: pointer;
+  transition: all 200ms ease;
+  margin-top: 2%;
+  margin-left: 5%;
+  margin-right: 5%;
+
+}
+
+.order {
+  text-align: center;
+}
+
+
+.formControl {
+  padding-bottom: 5%
+}
+
+.order {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 3%;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  cursor: pointer;
+  transition: all 200ms ease;
+  margin-top: 2%;
+  margin-left: 5%;
+  margin-right: 5%;
 }
